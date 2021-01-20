@@ -27,8 +27,6 @@ def drop_info_with_name(info, name):
     ret_info = {}
     keep_indices = [i for i, x in enumerate(info['name']) if x != name]
     for key in info.keys():
-        if key == 'num_points_in_gt':
-            print('indices' + str(keep_indices) + '; info[key] ====== ' + str(info[key]))
         ret_info[key] = info[key][keep_indices]
     return ret_info
 
